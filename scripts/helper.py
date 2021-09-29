@@ -73,7 +73,7 @@ def deploy_mocks(decimals=DECIMALS, initial_value=INITIAL_VALUE):
     MockV3Aggregator.deploy(decimals, initial_value, {"from": account})
     link_token = LinkToken.deploy({"from": account})
     VRFCoordinatorMock.deploy(link_token.address, {"from": account})
-    print("Deployed!")
+    print("Mocks Deployed!")
 
 
 def fund_with_link(
@@ -85,5 +85,5 @@ def fund_with_link(
     # link_token_contract = interface.LinkTokenInterface(link_token.address)
     # tx = link_token_contract.transfer(contract_address, amount, {"from": account})
     tx.wait(1)
-    print("Fund contract!")
+    print("Funding contract!")
     return tx
