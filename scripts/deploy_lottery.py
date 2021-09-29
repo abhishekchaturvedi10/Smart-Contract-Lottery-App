@@ -46,7 +46,7 @@ def end_lottery():
     tx.wait(1)
     ending_transaction = lottery.endLottery({"from": account})
     ending_transaction.wait(1)
-    time.sleep(60)
+    time.sleep(180)
     print(f"{lottery.recentWinner()} IS THE WINNER!")
 
 
